@@ -1,0 +1,60 @@
+﻿.container{
+    margin-left:100px;
+}
+
+
+
+.slab-font{
+    margin-left:-50px;
+    
+}
+
+
+
+
+.cart-table {
+    width: 100%;
+}
+
+ 
+    img{
+      margin-right: 20px;
+    }
+    .item-name {
+      font-weight: bold;
+      font-size: 16px;
+    }
+  
+  
+
+   .span2 .no-pl .btn-block
+   {
+       color:white;
+       border:groove black;
+       width:175px;
+       background:black;
+   }
+  
+  
+
+   
+  .heading {
+    
+      text-align: left;
+
+    border-bottom: 5px solid black;
+   
+    
+    }
+ 
+  caption {
+    text-align: left;
+    font-size: 22px;
+    border-bottom: 5px solid black;
+    padding: 20px ;
+    margin-bottom:15px;
+   width:200px;
+  }
+  
+  
+    

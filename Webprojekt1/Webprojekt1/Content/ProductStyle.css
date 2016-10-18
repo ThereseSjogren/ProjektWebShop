@@ -1,0 +1,137 @@
+﻿
+#sidebar-wrapper {
+    margin-top:70px;
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: rgba(255, 255, 255, 0.20);
+}
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.col-lg-12{
+    color:black;
+}
+    .sidebar-nav li {
+        text-indent: 20px;
+        line-height: 40px;
+    }
+
+        .sidebar-nav li a {
+            display: block;
+            text-decoration: none;
+            color:#000000;
+            /*color: rgba(255, 255, 255, 0.77);*/
+            font-size: large;
+            font-weight: bold;
+            margin: 30px;
+        }
+
+            .sidebar-nav li a:hover {
+                text-decoration: none;
+                color: rgba(213, 244, 243, 0.87);
+                background: rgba(128, 128, 128, 0.56);
+            }
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 250px;
+    }
+
+    #sidebar-wrapper {
+        width: 250px;
+    }
+   
+    h1 {
+        margin-left: -200px;
+        color: #373535;
+    }
+    .row {
+        margin-left: -200px;
+    }
+
+
+    .cover .btn {
+        padding: 0.5em 1em;
+        margin: 0.5em;
+        background: #373535;
+        float: right;
+        padding: 0.5em 1em;
+        border-radius: 0.25em;
+    }
+
+    .btn a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .box:hover .left {
+        -webkit-transition: all 0.4s cubic-bezier(.99,.99,0,.61);
+        left: 0px;
+    }
+
+    .left {
+        left: -250px;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .box {
+        width: 350px;
+        height: 300px;
+        /*background: url(../Pictures/ProductPictures/018390-0082.jpg);*/
+        background-size: cover;
+        overflow: hidden;
+        margin: 5px;
+        border: 1px solid #000;
+        box-shadow: 0px 0px 15px 0px #666, 0px 5px 15px 0px #000;
+    }
+
+    .cover {
+        width: 99%;
+        height: 100%;
+        background: rgba(0,0,0,0.45);
+        position: relative;
+        -webkit-transition: all 0.4s cubic-bezier(.99,.99,0,.61);
+        padding: 1em;
+        color: #fff;
+        overflow: hidden;
+        text-shadow: 1px 1px 0px #000;
+    }
+
+        .cover .title {
+            font-size: 16pt;
+            font-style: italic;
+        }
+        
+body{
+    padding:10px;
+}
+
+.show-on-hover:hover > ul.dropdown-menu {
+    display: block;    
+}
+
+.container{
+    margin-left:260px;
+}
+
+h3{
+    color:grey;
+    margin-left:14px;
+}
+
+
+}

@@ -1,0 +1,55 @@
+﻿ul.dropdown-cart{
+    min-width:250px;
+}
+ul.dropdown-cart li .item{
+    display:block;
+    padding:3px 11px;
+    margin: 2px 0;
+}
+/*ul.dropdown-cart li .item:hover{
+    background-color:#6f6a6a;
+}*/
+ul.dropdown-cart li .item:after{
+    /*visibility: hidden;*/
+    display: block;
+    font-size: 0;
+    
+    clear:none;
+   
+}
+
+/*ul.dropdown-cart li .item-left{
+    float:left; 
+}
+ul.dropdown-cart li .item-left img,
+ul.dropdown-cart li .item-left span.item-info{
+    float:left;
+}
+/*ul.dropdown-cart li .item-left span.item-info{
+    margin-left:10px;   
+}*/
+ul.dropdown-cart li .item-left span.item-info span{
+    display:block;
+}
+ul.dropdown-cart li .item-right{
+    float:right;
+}
+ul.dropdown-cart li .item-right button{
+    margin-top:14px;
+}*/
+
+.button {
+  background:#808080;
+  color:white;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  display: block;
+  border-radius: 3px;
+  font-size: 16px;
+  margin: 25px 0 15px 0;
+}
+
+.button  a:hover{
+    background:#ff0000;
+}

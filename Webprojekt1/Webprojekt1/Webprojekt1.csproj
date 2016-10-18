@@ -1,0 +1,1282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B4112378-0EB9-4966-B6A3-2FEF3CDD2D59}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Webprojekt1</RootNamespace>
+    <AssemblyName>Webprojekt1</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.0.1011, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.1.2.3\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.1.2.3\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.1.2.3\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.1.2.3\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.1.2.3\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=1.2.3.490, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.1.2.3\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Cryptography.Internal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Cryptography.Internal.1.0.0\lib\net451\Microsoft.AspNetCore.Cryptography.Internal.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.DataProtection, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.DataProtection.1.0.0\lib\net451\Microsoft.AspNetCore.DataProtection.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.DataProtection.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.DataProtection.Abstractions.1.0.0\lib\net451\Microsoft.AspNetCore.DataProtection.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Hosting.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Hosting.Abstractions.1.0.0\lib\net451\Microsoft.AspNetCore.Hosting.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Hosting.Server.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Hosting.Server.Abstractions.1.0.0\lib\net451\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Http.Abstractions.1.0.0\lib\net451\Microsoft.AspNetCore.Http.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http.Features, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Http.Features.1.0.0\lib\net451\Microsoft.AspNetCore.Http.Features.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Session, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Session.1.0.0\lib\net451\Microsoft.AspNetCore.Session.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Extensions.Caching.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Caching.Abstractions.1.0.0\lib\netstandard1.0\Microsoft.Extensions.Caching.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Abstractions.1.0.0\lib\netstandard1.0\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.1.0.0\lib\netstandard1.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileProviders.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.FileProviders.Abstractions.1.0.0\lib\netstandard1.0\Microsoft.Extensions.FileProviders.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.1.0.0\lib\netstandard1.1\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Options.1.0.0\lib\netstandard1.0\Microsoft.Extensions.Options.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.1.0.0\lib\netstandard1.0\Microsoft.Extensions.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Text.Encodings.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.4.0.0\lib\netstandard1.0\System.Text.Encodings.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.0.0\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.1.10.2\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <Private>True</Private>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.2.0.0\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Account\AddPhoneNumber.aspx" />
+    <Content Include="Account\Confirm.aspx" />
+    <Content Include="Account\Forgot.aspx" />
+    <Content Include="Account\Lockout.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Manage.aspx" />
+    <Content Include="Account\ManageLogins.aspx" />
+    <Content Include="Account\ManagePassword.aspx" />
+    <Content Include="Account\OpenAuthProviders.ascx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="Account\RegisterExternalLogin.aspx" />
+    <Content Include="Account\ResetPassword.aspx" />
+    <Content Include="Account\ResetPasswordConfirmation.aspx" />
+    <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
+    <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\AboutStyle.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\CartDropDown.css" />
+    <Content Include="Content\Childstyle.css" />
+    <Content Include="Content\ConFirmOrderStyle.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\OrderRec.css" />
+    <Content Include="Content\ProductStyle.css" />
+    <Content Include="Content\ShoppingCartStyle.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Errorhandling\fourhundredfour.aspx" />
+    <Content Include="Errorhandling\errorPage.aspx" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Account\Web.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="Pages\Child.aspx" />
+    <Content Include="Pages\ChildClothes\ChildJackets.aspx" />
+    <Content Include="Pages\ChildClothes\ChildJeans.aspx" />
+    <Content Include="Pages\ChildClothes\ChildSweatshirt.aspx" />
+    <Content Include="Pages\ChildClothes\ChildTshirt.aspx" />
+    <Content Include="Pages\ConfirmOrder.aspx" />
+    <Content Include="Pages\Male.aspx" />
+    <Content Include="Pages\MaleClothes\MaleJackets.aspx" />
+    <Content Include="Pages\MaleClothes\MaleJeans.aspx" />
+    <Content Include="Pages\MaleClothes\MaleSweatshirts.aspx" />
+    <Content Include="Pages\MaleClothes\MaleTshirts.aspx" />
+    <Content Include="Pages\OrderRec.aspx" />
+    <Content Include="Pages\ShoppingCart.aspx" />
+    <Content Include="Pages\ShoppingCartChild\ChildCartJacket\CJacket2.aspx" />
+    <Content Include="Pages\ShoppingCartChild\ChildCartJacket\CJacket1.aspx" />
+    <Content Include="Pages\ShoppingCartChild\ChildCartJeans\CJeans1.aspx" />
+    <Content Include="Pages\ShoppingCartChild\ChildCartJeans\CJeans2.aspx" />
+    <Content Include="Pages\ShoppingCartChild\ChildCartSweatShirt\CSweatShirt1.aspx" />
+    <Content Include="Pages\ShoppingCartChild\ChildCartSweatShirt\CSweatShirt2.aspx" />
+    <Content Include="Pages\ShoppingCartChild\ChildCartTShirt\CTShirt1.aspx" />
+    <Content Include="Pages\ShoppingCartChild\ChildCartTShirt\CTShirt2.aspx" />
+    <Content Include="Pages\ShoppingCartMen\MenCartJacket\MJacket1.aspx" />
+    <Content Include="Pages\ShoppingCartMen\MenCartJacket\Mjacket2.aspx" />
+    <Content Include="Pages\ShoppingCartMen\MenCartJeans\MJeans1.aspx" />
+    <Content Include="Pages\ShoppingCartMen\MenCartJeans\MJeans2.aspx" />
+    <Content Include="Pages\ShoppingCartMen\MenCartJeans\MJeans3.aspx" />
+    <Content Include="Pages\ShoppingCartMen\MenCartSweatShirt\MSweatShirt1.aspx" />
+    <Content Include="Pages\ShoppingCartMen\MenCartSweatShirt\MSweatShirt2.aspx" />
+    <Content Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt1.aspx" />
+    <Content Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt10.aspx" />
+    <Content Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt11.aspx" />
+    <Content Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt12.aspx" />
+    <Content Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt13.aspx" />
+    <Content Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt14.aspx" />
+    <Content Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt15.aspx" />
+    <Content Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt16.aspx" />
+    <Content Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt17.aspx" />
+    <Content Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt18.aspx" />
+    <Content Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt19.aspx" />
+    <Content Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt2.aspx" />
+    <Content Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt20.aspx" />
+    <Content Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt21.aspx" />
+    <Content Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt22.aspx" />
+    <Content Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt23.aspx" />
+    <Content Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt24.aspx" />
+    <Content Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt25.aspx" />
+    <Content Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt26.aspx" />
+    <Content Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt27.aspx" />
+    <Content Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt3.aspx" />
+    <Content Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt4.aspx" />
+    <Content Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt5.aspx" />
+    <Content Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt6.aspx" />
+    <Content Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt7.aspx" />
+    <Content Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt8.aspx" />
+    <Content Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt9.aspx" />
+    <Content Include="Pages\ShoppingCartWomen\WomenCartJacket\WJacket1.aspx" />
+    <Content Include="Pages\ShoppingCartWomen\WomenCartJacket\WJacket2.aspx" />
+    <Content Include="Pages\ShoppingCartWomen\WomenCartJeans\WJeans1.aspx" />
+    <Content Include="Pages\ShoppingCartWomen\WomenCartJeans\WJeans2.aspx" />
+    <Content Include="Pages\ShoppingCartWomen\WomenCartSweatShirt\WSweatShirt1.aspx" />
+    <Content Include="Pages\ShoppingCartWomen\WomenCartSweatShirt\WSweatShirt2.aspx" />
+    <Content Include="Pages\ShoppingCartWomen\WomenCartTShirt\WTShirt1.aspx" />
+    <Content Include="Pages\ShoppingCartWomen\WomenCartTShirt\WTShirt2.aspx" />
+    <Content Include="Pages\TestInsertProducts.aspx" />
+    <Content Include="Pages\Tests\Login.aspx" />
+    <Content Include="Pages\Tests\Registration.aspx" />
+    <Content Include="Pages\Tests\ProceedOrder.aspx" />
+    <Content Include="SearchResult.aspx" />
+    <Content Include="Pages\AddToCart.aspx" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Pages\ProductInformation.aspx" />
+    <Content Include="Pages\Tests\TestProductFiltering.aspx" />
+    <Content Include="Pages\Tests\TestSite.aspx" />
+    <Content Include="Pages\Women.aspx" />
+    <Content Include="Pages\Womenclothes\WomenJackets.aspx" />
+    <Content Include="Pages\Womenclothes\WomenJeans.aspx" />
+    <Content Include="Pages\Womenclothes\WomenSweatshirt.aspx" />
+    <Content Include="Pages\Womenclothes\WomenTshirt.aspx" />
+    <Content Include="Images\Free-Shipping-Kid-Winter-Down-Jacket-Winter-Child-Coat-Warm-Unisex-Baby-Jacket-White-Duck-Down.jpg" />
+    <Content Include="Images\lhotse_kids_jacket_bright_blue.jpg" />
+    <Content Include="Images\gp621440-00vliv01.jpg" />
+    <Content Include="Images\Wholesale-2015-kids-pants-Boys-jeans-pant-kids-denim-trousers-baby-jeans-clothing-child-pant-baby.jpg" />
+    <Content Include="Images\2016-Hot-Sale-Casual-Boys-font-b-Sweatshirts-b-font-font-b-White-b-font-And.jpg" />
+    <Content Include="Images\images1VUSFMVT.jpg" />
+    <Content Include="Images\New-2016-kids-clothes-font-b-children-b-font-hoodie-long-sleeve-boys-font-b-sweatshirt.jpg" />
+    <Content Include="Images\boys-tees-font-b-shirts-b-font-shark-girls-t-font-b-shirts-b-font-baby.jpg" />
+    <Content Include="Images\Denna.jpg" />
+    <Content Include="Images\original_colour-in-car-child-s-t-shirt.jpg" />
+    <Content Include="Images\company.png" />
+    <Content Include="Images\bild till errorpage.jpg" />
+    <Content Include="Images\fashionl.jpg" />
+    <Content Include="Images\Jeans640.jpg" />
+    <Content Include="Images\2015-New-sport-hoodie-font-b-men-b-font-rain-font-b-jacket-b-font-winter.jpg" />
+    <Content Include="Images\61856_HARRIN001.jpg" />
+    <Content Include="Images\61856_SKAJ001.jpg" />
+    <Content Include="Images\High-Quality-Pure-Cotton-font-b-Men-b-font-font-b-jacket-b-font-2016-Spring.jpg" />
+    <Content Include="Images\22mwxsw-20xf_01.jpg" />
+    <Content Include="Images\284732_main.jpg" />
+    <Content Include="Images\denim-hm.jpg" />
+    <Content Include="Images\denim-jeans-for-men-1.jpg" />
+    <Content Include="Images\3caa141679d0786eeac67d5f3e7b7cbf.jpg" />
+    <Content Include="Images\60f2cf198749d11d54c436685f2fe903.jpg" />
+    <Content Include="Images\24.jpg" />
+    <Content Include="Images\41igERUiR7L._SX342_.jpg" />
+    <Content Include="Images\45197503_xxl.jpg" />
+    <Content Include="Images\4f6b262346ff1.jpg" />
+    <Content Include="Images\77.jpg" />
+    <Content Include="Images\dsdd.jpg" />
+    <Content Include="Images\ggdg.jpg" />
+    <Content Include="Images\grrg.jpg" />
+    <Content Include="Images\halloween-splatter-mask-mens-t-shirt-subhw01.jpg" />
+    <Content Include="Images\HDBTJ.jpg" />
+    <Content Include="Images\htt.jpg" />
+    <Content Include="Images\il_340x270.694750800_pvl2.jpg" />
+    <Content Include="Images\lålålå.jpg" />
+    <Content Include="Images\men-s-white-amp-black-contrast-t-shirt-41_t_300_300.jpg" />
+    <Content Include="Images\mens-bright-orange-plain-y-neck-t-shirt-with-contrast-trim-p20003-20903_zoom.jpg" />
+    <Content Include="Images\mens-white-paisley-pocket-t-shirt-p18970-15461_zoom.jpg" />
+    <Content Include="Images\New-Arrival-3D-Rock-Skull-Fashion-Mens-t-shirt-2016-New-Summer-Style-t-shirt-men.jpg_640x640.jpg" />
+    <Content Include="Images\New-Arrival-Men-s-T-Shirt-Minions-Despicable-Me-Funny-font-b-Graphic-b-font-font.jpg" />
+    <Content Include="Images\new-fashion-men-t-shirt-high-quality-3d-t-shirt-animal-cartoon-3d-printed-short-sleeve-t-shirt-tops-tees-men-t-shirt-m-4xl-1_large.jpg" />
+    <Content Include="Images\new-fashion-men-tee-tops-t-shirts-custom.jpg" />
+    <Content Include="Images\nionoin.jpg" />
+    <Content Include="Images\sh.jpg" />
+    <Content Include="Images\shopping.jpg" />
+    <Content Include="Images\sport-mens-tshirt-tryzub-ukrainian-t-shirts.jpg" />
+    <Content Include="Images\tth.jpg" />
+    <Content Include="Images\tthth.jpg" />
+    <Content Include="Images\Under-Armour-Heatgear-Armourvent-Shortsleeve-T-Shirt---42802035-SteelGraphite---Men-T-Shirt.jpg" />
+    <Content Include="Images\oldwhite.jpg" />
+    <Content Include="Images\thank you.jpg" />
+    <Content Include="Images\129716-3138.jpg" />
+    <Content Include="Images\132322-6180.jpg" />
+    <Content Include="Images\172429-1131.jpg" />
+    <Content Include="Images\290872-0286.jpg" />
+    <Content Include="Images\340622-0286.jpg" />
+    <Content Include="Images\343116-9840_3.jpg" />
+    <Content Include="Images\343271-0912.jpg" />
+    <Content Include="Images\437505-5005.jpg" />
+    <Content Include="Images\801157-0989.jpg" />
+    <Content Include="Images\801190-3843.jpg" />
+    <Content Include="Images\804070-7767.jpg" />
+    <Content Include="Images\891185-0446.jpg" />
+    <Content Include="Images\Shirt.jpg" />
+    <Content Include="Images\Shoes.jpg" />
+    <Content Include="Images\Sweater.jpeg" />
+    <Content Include="Images\T-shirt2.JPG" />
+    <Content Include="Images\image1xxl[1].jpg" />
+    <Content Include="Images\Wintercloth.jpeg" />
+    <Content Include="Images\WinterHats.jpeg" />
+    <Content Include="Pages\Products.aspx" />
+    <Content Include="Images\arrow_women_brown_leather_jacket_ikyt5.jpg" />
+    <Content Include="Images\white-womens-jacket-12.jpg" />
+    <Content Include="Images\women-jackets-250x250.jpg" />
+    <Content Include="Images\11df109a74521f66461e42453299af6d.jpg" />
+    <Content Include="Images\China_2014_Lady_s_Newest_Fashion_Straight_Jeans_Hot_2013_New_Style_Woman_Jean_Clothes2014191000402.jpg" />
+    <Content Include="Images\womens-blue-shredded-skinny-jeans-p19857-20531_zoom.jpg" />
+    <Content Include="Images\womens-blue-skinny-fit-plain-wash-jeans-p27729-49668_image.jpg" />
+    <Content Include="Images\blue-inc-woman-womens-grey-panther-sweatshirt-p18952-15395_zoom.jpg" />
+    <Content Include="Images\blue-inc-woman-womens-red-nerdville-sweatshirt-p19126-18347_zoom.jpg" />
+    <Content Include="Images\blue-inc-woman-womens-white-nyc-sweatshirt-p18955-15394_zoom.jpg" />
+    <Content Include="Images\img-thing.jpg" />
+    <Content Include="Images\Bulk-White-Printed-Summer-Casual-Women-T-Shirts-White-Basic-T-Shirt-TYA-WT1301-1-.jpg" />
+    <Content Include="Images\t-shirt-women-12.jpg" />
+    <Content Include="Images\untitled.png" />
+    <Content Include="Scripts\ai.0.15.0-build58334.js" />
+    <Content Include="Scripts\ai.0.15.0-build58334.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\Filterbox.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Site.Master" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="Bundle.config" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Site.Mobile.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\AddPhoneNumber.aspx.cs">
+      <DependentUpon>AddPhoneNumber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\AddPhoneNumber.aspx.designer.cs">
+      <DependentUpon>AddPhoneNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Confirm.aspx.cs">
+      <DependentUpon>Confirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Confirm.aspx.designer.cs">
+      <DependentUpon>Confirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Forgot.aspx.cs">
+      <DependentUpon>Forgot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Forgot.aspx.designer.cs">
+      <DependentUpon>Forgot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Lockout.aspx.cs">
+      <DependentUpon>Lockout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Lockout.aspx.designer.cs">
+      <DependentUpon>Lockout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.designer.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ManageLogins.aspx.cs">
+      <DependentUpon>ManageLogins.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ManageLogins.aspx.designer.cs">
+      <DependentUpon>ManageLogins.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ManagePassword.aspx.cs">
+      <DependentUpon>ManagePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ManagePassword.aspx.designer.cs">
+      <DependentUpon>ManagePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.designer.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.designer.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ResetPassword.aspx.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ResetPassword.aspx.designer.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ResetPasswordConfirmation.aspx.cs">
+      <DependentUpon>ResetPasswordConfirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ResetPasswordConfirmation.aspx.designer.cs">
+      <DependentUpon>ResetPasswordConfirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\TwoFactorAuthenticationSignIn.aspx.cs">
+      <DependentUpon>TwoFactorAuthenticationSignIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\TwoFactorAuthenticationSignIn.aspx.designer.cs">
+      <DependentUpon>TwoFactorAuthenticationSignIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\VerifyPhoneNumber.aspx.cs">
+      <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
+      <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Errorhandling\fourhundredfour.aspx.cs">
+      <DependentUpon>fourhundredfour.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Errorhandling\fourhundredfour.aspx.designer.cs">
+      <DependentUpon>fourhundredfour.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Errorhandling\errorPage.aspx.cs">
+      <DependentUpon>errorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Errorhandling\errorPage.aspx.designer.cs">
+      <DependentUpon>errorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ShoppingCartActions.cs" />
+    <Compile Include="Pages\Child.aspx.cs">
+      <DependentUpon>Child.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Child.aspx.designer.cs">
+      <DependentUpon>Child.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ChildClothes\ChildJackets.aspx.cs">
+      <DependentUpon>ChildJackets.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ChildClothes\ChildJackets.aspx.designer.cs">
+      <DependentUpon>ChildJackets.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ChildClothes\ChildJeans.aspx.cs">
+      <DependentUpon>ChildJeans.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ChildClothes\ChildJeans.aspx.designer.cs">
+      <DependentUpon>ChildJeans.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ChildClothes\ChildSweatshirt.aspx.cs">
+      <DependentUpon>ChildSweatshirt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ChildClothes\ChildSweatshirt.aspx.designer.cs">
+      <DependentUpon>ChildSweatshirt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ChildClothes\ChildTshirt.aspx.cs">
+      <DependentUpon>ChildTshirt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ChildClothes\ChildTshirt.aspx.designer.cs">
+      <DependentUpon>ChildTshirt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ConfirmOrder.aspx.cs">
+      <DependentUpon>ConfirmOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ConfirmOrder.aspx.designer.cs">
+      <DependentUpon>ConfirmOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Male.aspx.cs">
+      <DependentUpon>Male.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Male.aspx.designer.cs">
+      <DependentUpon>Male.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MaleClothes\MaleJackets.aspx.cs">
+      <DependentUpon>MaleJackets.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\MaleClothes\MaleJackets.aspx.designer.cs">
+      <DependentUpon>MaleJackets.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MaleClothes\MaleJeans.aspx.cs">
+      <DependentUpon>MaleJeans.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\MaleClothes\MaleJeans.aspx.designer.cs">
+      <DependentUpon>MaleJeans.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MaleClothes\MaleSweatshirts.aspx.cs">
+      <DependentUpon>MaleSweatshirts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\MaleClothes\MaleSweatshirts.aspx.designer.cs">
+      <DependentUpon>MaleSweatshirts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MaleClothes\MaleTshirts.aspx.cs">
+      <DependentUpon>MaleTshirts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\MaleClothes\MaleTshirts.aspx.designer.cs">
+      <DependentUpon>MaleTshirts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OrderRec.aspx.cs">
+      <DependentUpon>OrderRec.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\OrderRec.aspx.designer.cs">
+      <DependentUpon>OrderRec.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Products.aspx.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Products.aspx.designer.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ProductInformation.aspx.cs">
+      <DependentUpon>ProductInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ProductInformation.aspx.designer.cs">
+      <DependentUpon>ProductInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartChild\ChildCartJacket\CJacket2.aspx.cs">
+      <DependentUpon>CJacket2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartChild\ChildCartJacket\CJacket2.aspx.designer.cs">
+      <DependentUpon>CJacket2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartChild\ChildCartJacket\CJacket1.aspx.cs">
+      <DependentUpon>CJacket1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartChild\ChildCartJacket\CJacket1.aspx.designer.cs">
+      <DependentUpon>CJacket1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartChild\ChildCartJeans\CJeans1.aspx.cs">
+      <DependentUpon>CJeans1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartChild\ChildCartJeans\CJeans1.aspx.designer.cs">
+      <DependentUpon>CJeans1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartChild\ChildCartJeans\CJeans2.aspx.cs">
+      <DependentUpon>CJeans2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartChild\ChildCartJeans\CJeans2.aspx.designer.cs">
+      <DependentUpon>CJeans2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartChild\ChildCartSweatShirt\CSweatShirt1.aspx.cs">
+      <DependentUpon>CSweatShirt1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartChild\ChildCartSweatShirt\CSweatShirt1.aspx.designer.cs">
+      <DependentUpon>CSweatShirt1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartChild\ChildCartSweatShirt\CSweatShirt2.aspx.cs">
+      <DependentUpon>CSweatShirt2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartChild\ChildCartSweatShirt\CSweatShirt2.aspx.designer.cs">
+      <DependentUpon>CSweatShirt2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartChild\ChildCartTShirt\CTShirt1.aspx.cs">
+      <DependentUpon>CTShirt1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartChild\ChildCartTShirt\CTShirt1.aspx.designer.cs">
+      <DependentUpon>CTShirt1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartChild\ChildCartTShirt\CTShirt2.aspx.cs">
+      <DependentUpon>CTShirt2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartChild\ChildCartTShirt\CTShirt2.aspx.designer.cs">
+      <DependentUpon>CTShirt2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartJacket\MJacket1.aspx.cs">
+      <DependentUpon>MJacket1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartJacket\MJacket1.aspx.designer.cs">
+      <DependentUpon>MJacket1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartJacket\Mjacket2.aspx.cs">
+      <DependentUpon>Mjacket2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartJacket\Mjacket2.aspx.designer.cs">
+      <DependentUpon>Mjacket2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartJeans\MJeans1.aspx.cs">
+      <DependentUpon>MJeans1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartJeans\MJeans1.aspx.designer.cs">
+      <DependentUpon>MJeans1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartJeans\MJeans2.aspx.cs">
+      <DependentUpon>MJeans2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartJeans\MJeans2.aspx.designer.cs">
+      <DependentUpon>MJeans2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartJeans\MJeans3.aspx.cs">
+      <DependentUpon>MJeans3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartJeans\MJeans3.aspx.designer.cs">
+      <DependentUpon>MJeans3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartSweatShirt\MSweatShirt1.aspx.cs">
+      <DependentUpon>MSweatShirt1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartSweatShirt\MSweatShirt1.aspx.designer.cs">
+      <DependentUpon>MSweatShirt1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartSweatShirt\MSweatShirt2.aspx.cs">
+      <DependentUpon>MSweatShirt2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartSweatShirt\MSweatShirt2.aspx.designer.cs">
+      <DependentUpon>MSweatShirt2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt1.aspx.cs">
+      <DependentUpon>MTshirt1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt1.aspx.designer.cs">
+      <DependentUpon>MTshirt1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt10.aspx.cs">
+      <DependentUpon>MTshirt10.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt10.aspx.designer.cs">
+      <DependentUpon>MTshirt10.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt11.aspx.cs">
+      <DependentUpon>MTshirt11.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt11.aspx.designer.cs">
+      <DependentUpon>MTshirt11.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt12.aspx.cs">
+      <DependentUpon>MTshirt12.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt12.aspx.designer.cs">
+      <DependentUpon>MTshirt12.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt13.aspx.cs">
+      <DependentUpon>MTshirt13.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt13.aspx.designer.cs">
+      <DependentUpon>MTshirt13.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt14.aspx.cs">
+      <DependentUpon>MTshirt14.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt14.aspx.designer.cs">
+      <DependentUpon>MTshirt14.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt15.aspx.cs">
+      <DependentUpon>MTshirt15.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt15.aspx.designer.cs">
+      <DependentUpon>MTshirt15.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt16.aspx.cs">
+      <DependentUpon>MTshirt16.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt16.aspx.designer.cs">
+      <DependentUpon>MTshirt16.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt17.aspx.cs">
+      <DependentUpon>MTshirt17.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt17.aspx.designer.cs">
+      <DependentUpon>MTshirt17.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt18.aspx.cs">
+      <DependentUpon>MTshirt18.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt18.aspx.designer.cs">
+      <DependentUpon>MTshirt18.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt19.aspx.cs">
+      <DependentUpon>MTshirt19.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt19.aspx.designer.cs">
+      <DependentUpon>MTshirt19.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt2.aspx.cs">
+      <DependentUpon>MTshirt2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt2.aspx.designer.cs">
+      <DependentUpon>MTshirt2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt20.aspx.cs">
+      <DependentUpon>MTshirt20.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt20.aspx.designer.cs">
+      <DependentUpon>MTshirt20.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt21.aspx.cs">
+      <DependentUpon>MTshirt21.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt21.aspx.designer.cs">
+      <DependentUpon>MTshirt21.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt22.aspx.cs">
+      <DependentUpon>MTshirt22.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt22.aspx.designer.cs">
+      <DependentUpon>MTshirt22.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt23.aspx.cs">
+      <DependentUpon>MTshirt23.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt23.aspx.designer.cs">
+      <DependentUpon>MTshirt23.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt24.aspx.cs">
+      <DependentUpon>MTshirt24.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt24.aspx.designer.cs">
+      <DependentUpon>MTshirt24.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt25.aspx.cs">
+      <DependentUpon>MTshirt25.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt25.aspx.designer.cs">
+      <DependentUpon>MTshirt25.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt26.aspx.cs">
+      <DependentUpon>MTshirt26.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt26.aspx.designer.cs">
+      <DependentUpon>MTshirt26.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt27.aspx.cs">
+      <DependentUpon>MTshirt27.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt27.aspx.designer.cs">
+      <DependentUpon>MTshirt27.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt3.aspx.cs">
+      <DependentUpon>MTshirt3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt3.aspx.designer.cs">
+      <DependentUpon>MTshirt3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt4.aspx.cs">
+      <DependentUpon>MTshirt4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt4.aspx.designer.cs">
+      <DependentUpon>MTshirt4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt5.aspx.cs">
+      <DependentUpon>MTshirt5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt5.aspx.designer.cs">
+      <DependentUpon>MTshirt5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt6.aspx.cs">
+      <DependentUpon>MTshirt6.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt6.aspx.designer.cs">
+      <DependentUpon>MTshirt6.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt7.aspx.cs">
+      <DependentUpon>MTshirt7.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt7.aspx.designer.cs">
+      <DependentUpon>MTshirt7.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt8.aspx.cs">
+      <DependentUpon>MTshirt8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt8.aspx.designer.cs">
+      <DependentUpon>MTshirt8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt9.aspx.cs">
+      <DependentUpon>MTshirt9.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartMen\MenCartTShirt\MTshirt9.aspx.designer.cs">
+      <DependentUpon>MTshirt9.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartWomen\WomenCartJacket\WJacket1.aspx.cs">
+      <DependentUpon>WJacket1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartWomen\WomenCartJacket\WJacket1.aspx.designer.cs">
+      <DependentUpon>WJacket1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartWomen\WomenCartJacket\WJacket2.aspx.cs">
+      <DependentUpon>WJacket2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartWomen\WomenCartJacket\WJacket2.aspx.designer.cs">
+      <DependentUpon>WJacket2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartWomen\WomenCartJeans\WJeans1.aspx.cs">
+      <DependentUpon>WJeans1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartWomen\WomenCartJeans\WJeans1.aspx.designer.cs">
+      <DependentUpon>WJeans1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartWomen\WomenCartJeans\WJeans2.aspx.cs">
+      <DependentUpon>WJeans2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartWomen\WomenCartJeans\WJeans2.aspx.designer.cs">
+      <DependentUpon>WJeans2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartWomen\WomenCartSweatShirt\WSweatShirt1.aspx.cs">
+      <DependentUpon>WSweatShirt1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartWomen\WomenCartSweatShirt\WSweatShirt1.aspx.designer.cs">
+      <DependentUpon>WSweatShirt1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartWomen\WomenCartSweatShirt\WSweatShirt2.aspx.cs">
+      <DependentUpon>WSweatShirt2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartWomen\WomenCartSweatShirt\WSweatShirt2.aspx.designer.cs">
+      <DependentUpon>WSweatShirt2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartWomen\WomenCartTShirt\WTShirt1.aspx.cs">
+      <DependentUpon>WTShirt1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartWomen\WomenCartTShirt\WTShirt1.aspx.designer.cs">
+      <DependentUpon>WTShirt1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartWomen\WomenCartTShirt\WTShirt2.aspx.cs">
+      <DependentUpon>WTShirt2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCartWomen\WomenCartTShirt\WTShirt2.aspx.designer.cs">
+      <DependentUpon>WTShirt2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TestInsertProducts.aspx.cs">
+      <DependentUpon>TestInsertProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\TestInsertProducts.aspx.designer.cs">
+      <DependentUpon>TestInsertProducts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Tests\TestProductFiltering.aspx.cs">
+      <DependentUpon>TestProductFiltering.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Tests\TestProductFiltering.aspx.designer.cs">
+      <DependentUpon>TestProductFiltering.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Tests\TestSite.aspx.cs">
+      <DependentUpon>TestSite.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Tests\TestSite.aspx.designer.cs">
+      <DependentUpon>TestSite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Women.aspx.cs">
+      <DependentUpon>Women.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Women.aspx.designer.cs">
+      <DependentUpon>Women.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Womenclothes\WomenJackets.aspx.cs">
+      <DependentUpon>WomenJackets.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Womenclothes\WomenJackets.aspx.designer.cs">
+      <DependentUpon>WomenJackets.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Womenclothes\WomenJeans.aspx.cs">
+      <DependentUpon>WomenJeans.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Womenclothes\WomenJeans.aspx.designer.cs">
+      <DependentUpon>WomenJeans.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Womenclothes\WomenSweatshirt.aspx.cs">
+      <DependentUpon>WomenSweatshirt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Womenclothes\WomenSweatshirt.aspx.designer.cs">
+      <DependentUpon>WomenSweatshirt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Womenclothes\WomenTshirt.aspx.cs">
+      <DependentUpon>WomenTshirt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Womenclothes\WomenTshirt.aspx.designer.cs">
+      <DependentUpon>WomenTshirt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.cs" />
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ShoppingCart.aspx.cs">
+      <DependentUpon>ShoppingCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ShoppingCart.aspx.designer.cs">
+      <DependentUpon>ShoppingCart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Tests\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Tests\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Tests\Registration.aspx.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Tests\Registration.aspx.designer.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Tests\ProceedOrder.aspx.cs">
+      <DependentUpon>ProceedOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Tests\ProceedOrder.aspx.designer.cs">
+      <DependentUpon>ProceedOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchResult.aspx.cs">
+      <DependentUpon>SearchResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchResult.aspx.designer.cs">
+      <DependentUpon>SearchResult.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AddToCart.aspx.cs">
+      <DependentUpon>AddToCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\AddToCart.aspx.designer.cs">
+      <DependentUpon>AddToCart.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="FinanceDepartment\" />
+    <Folder Include="TroubleShoot\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebShopDAL\WebShopDAL.csproj">
+      <Project>{671a9a9a-3b91-4f13-8fef-0e394fc286a6}</Project>
+      <Name>WebShopDAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>63254</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:63254/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

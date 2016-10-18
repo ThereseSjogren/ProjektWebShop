@@ -1,0 +1,25 @@
+﻿
+.OrderRecText {
+    width: 400px;
+    text-align: center;
+}
+
+    .OrderRecText img {
+        border: 1px solid gray;
+        margin-top:40px;
+        width:350px;
+    }
+
+    .OrderRecText p {
+        font-style: italic;
+        font-size: 20px;
+        color:black;
+    }
+    h2{
+        color:black;
+    }
+
+.OrderRecText {
+    margin-left: 387px;
+    margin-top: 30px;
+}

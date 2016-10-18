@@ -1,0 +1,24 @@
+﻿
+.image_w_text {
+    width: 400px;
+    text-align: center;
+}
+
+    .image_w_text img {
+        border: 1px solid gray;
+        margin-top:40px;
+    }
+
+    .image_w_text p {
+        font-style: italic;
+        font-size: 20px;
+        color:black;
+    }
+    h2{
+        color:black;
+    }
+
+.image_w_text {
+    margin-left: 387px;
+    margin-top: 30px;
+}

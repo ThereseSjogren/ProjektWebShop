@@ -1,0 +1,369 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Webprojekt1.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> ETEA Clothes</title>
+
+    <asp:PlaceHolder runat="server">
+        <%:Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="Content/font-awesome.css" rel="stylesheet" />
+    <link href="Content/CartDropDown.css" rel="stylesheet" />
+    
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="respond" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+
+                    </button>
+                    <a class="navbar-brand" runat="server" href="~/">ETEA Clothes</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Women
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                               <li><a runat="server" href="Pages/Women.aspx">All products</a></li>
+                                <li><a runat="server" href="Pages/ShoppingCartWomen/WomenCartTShirt/WTShirt1.aspx">T-shirts</a></li>
+                                <li><a runat="server" href="Pages/ShoppingCartWomen/WomenCartSweatShirt/WSweatShirt1.aspx">Sweatshirts</a></li>
+                                <li><a runat="server" href="Pages/ShoppingCartWomen/WomenCartJeans/WJeans1.aspx">Jeans</a></li>
+                                <li><a runat="server" href="Pages/ShoppingCartWomen/WomenCartJacket/WJacket1.aspx">Jackets</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Men
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a runat="server" href="Pages/Male.aspx">All products</a></li>
+                               
+                                <li><a runat="server" href="Pages/MaleClothes/MaleTshirts.aspx">T-shirts</a></li>
+
+                                <li><a runat="server" href="Pages/MaleClothes/MaleSweatshirts.aspx">Sweatshirts</a></li>
+
+                                <li><a runat="server" href="Pages/MaleClothes/MaleJeans.aspx">Jeans</a></li>
+
+                                <li><a runat="server" href="Pages/MaleClothes/MaleJackets.aspx">Jackets</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Child
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a runat="server" href="Pages/Child.aspx">All products</a></li>
+                               
+                                <li><a runat="server" href="Pages/ChildClothes/ChildTshirt.aspx">T-shirts</a></li>
+                                <li><a runat="server" href="Pages/ChildClothes/ChildSweatshirt.aspx">Sweatshirts</a></li>
+                                <li><a runat="server" href="Pages/ChildClothes/ChildJeans.aspx">Jeans</a></li>
+                                <li><a runat="server" href="Pages/ChildClothes/ChildJackets.aspx">Jackets</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Information
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a runat="server" href="About.aspx">About</a></li>
+                                <li><a runat="server" href="Contact.aspx">Contact</a></li>
+                            </ul>
+                        </li>
+                        <%--<li><a runat="server" href="~/About">About</a></li>
+                        <li><a runat="server" href="~/Contact">Contact</a></li>--%>
+                    </ul>
+                    <div class="box1">
+                        <div class="container-1">
+                        
+                            <asp:TextBox ID="txtSearchbox" runat="server"></asp:TextBox>
+                                <asp:Button ID="btnSearch" runat="server" Text="Search" OnClick="btnSearch_Click"  />
+                            <%--<input type="search" id="search" placeholder="Search..." />--%>
+                        </div>
+                    </div>
+
+                    <asp:LoginView runat="server" ViewStateMode="Disabled">
+                        <AnonymousTemplate>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a runat="server" href="~/Account/Register"><span class="glyphicon glyphicon-user">Register</a></li>
+                                <li><a runat="server" href="~/Account/Login"><span class="glyphicon glyphicon-log-in"></span>Log in</a></li>
+                            </ul>
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a runat="server" href="~/Account/Manage" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName()  %> !</a></li>
+                                <li>
+                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
+                                </li>
+                            </ul>
+                        </LoggedInTemplate>
+                    </asp:LoginView>
+                </div>
+
+                <div id="shop">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-shopping-cart"></span>Shopping Cart<span class="caret"></span></a>
+                            
+                            <ul class="dropdown-menu dropdown-cart" role="menu">
+                                <li>
+                                    
+                                    <span class="item">
+                                        
+                                        <span class="item-left">
+                                             
+                                             <span class="item-center">
+                                                 <button class="btn btn-xs btn-danger pull-right" >X</button>
+                                                 <asp:ListView ID="_listViewChart" runat="server" DataKeyNames="ProductID">
+                                                    <AlternatingItemTemplate>
+                                                        <tr style="">
+                                                            <td>
+                                                                <asp:Label ID="ProductIDLabel" runat="server" Text='<%# Eval("ProductID") %>' />
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="ProductBrandLabel" runat="server" Text='<%# Eval("ProductBrand") %>' />
+                                                            <td>
+                                                                <asp:Label ID="PriceUnitLabel" runat="server" Text='<%# Eval("PriceUnit") %>' />
+                                                            </td>
+                                                            <%--<td>
+                                                                <asp:TextBox ID="TextBoxQuantity" runat="server" Text='<%# Eval("Quantity") %>' />
+                                                            </td>--%>
+                                                            <td>
+                                                                <asp:Label ID="ColorLabel" runat="server" Text='<%# Eval("Color") %>' />
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="SizeLabel" runat="server" Text='<%# Eval("Size") %>' />
+                                                            </td>
+
+
+                                                        </tr>
+                                                    </AlternatingItemTemplate>
+                                                    <%--<EditItemTemplate>
+                                                        <tr style="">
+                                                            <td>
+                                                                <asp:Button ID="UpdateButton" runat="server" CommandName="Update" Text="Update" />
+                                                                <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Cancel" />
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="ProductIDLabel1" runat="server" Text='<%# Eval("ProductID") %>' />
+                                                            </td>
+                                                            <td>
+                                                                <asp:TextBox ID="ProductBrandTextBox" runat="server" Text='<%# Bind("ProductBrand") %>' />
+                                                            </td>
+                                                            <td>
+                                                                <asp:TextBox ID="ColorTextBox" runat="server" Text='<%# Bind("Color") %>' />
+                                                            </td>
+                                                            <td>
+                                                                <asp:TextBox ID="SizeTextBox" runat="server" Text='<%# Bind("Size") %>' />
+                                                            </td>
+                                                            <td>
+                                                                <asp:TextBox ID="CategoryNameTextBox" runat="server" Text='<%# Bind("CategoryName") %>' />
+                                                            </td>
+                                                            <td>
+                                                                <asp:TextBox ID="PriceUnitTextBox" runat="server" Text='<%# Bind("PriceUnit") %>' />
+                                                            </td>
+                                                            <td>
+                                                                <asp:TextBox ID="QuantityTextBox" runat="server" Text='<%# Bind("Quantity") %>' />
+                                                            </td>
+                                                            <td>
+                                                                <asp:TextBox ID="RabattTextBox" runat="server" Text='<%# Bind("Rabatt") %>' />
+                                                            </td>
+                                                            <td>
+                                                                <asp:TextBox ID="TotalTextBox" runat="server" Text='<%# Bind("PriceUnit") %>' />
+                                                            </td>
+                                                            <td>
+                                                                <asp:TextBox ID="Total_with_DiscountTextBox" runat="server" Text='<%# Bind("TotalWithDiscount") %>' />
+                                                            </td>
+                                                            <td>
+                                                                <asp:TextBox ID="Total_with_TaxTextBox" runat="server" Text='<%# Bind("TotalWithTax") %>' />
+                                                            </td>
+                                                        </tr>
+                                                    </EditItemTemplate>--%>
+                                                    <%-- Empty let it beeeeeeee --%>
+                                                    <%--<InsertItemTemplate>
+                                                        <tr style="">
+                                                            <td>
+                                                                <asp:Button ID="InsertButton" runat="server" CommandName="Insert" Text="Insert" />
+                                                                <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Clear" />
+                                                            </td>
+                                                            <td>&nbsp;</td>
+                                                            <td>
+                                                                <asp:TextBox ID="ProductBrandTextBox" runat="server" Text='<%# Bind("ProductBrand") %>' />
+                                                            </td>
+                                                            <td>
+                                                                <asp:TextBox ID="ColorTextBox" runat="server" Text='<%# Bind("Color") %>' />
+                                                            </td>
+                                                            <td>
+                                                                <asp:TextBox ID="SizeTextBox" runat="server" Text='<%# Bind("Size") %>' />
+                                                            </td>
+                                                            <td>
+                                                                <asp:TextBox ID="CategoryNameTextBox" runat="server" Text='<%# Bind("CategoryName") %>' />
+                                                            </td>
+                                                            <td>
+                                                                <asp:TextBox ID="PriceUnitTextBox" runat="server" Text='<%# Bind("PriceUnit") %>' />
+                                                            </td>
+                                                            <td>
+                                                                <asp:TextBox ID="QuantityTextBox" runat="server" Text='<%# Bind("Quantity") %>' />
+                                                            </td>
+                                                            <td>
+                                                                <asp:TextBox ID="RabattTextBox" runat="server" Text='<%# Bind("Rabatt") %>' />
+                                                            </td>
+                                                            <td>
+                                                                <asp:TextBox ID="TotalTextBox" runat="server" Text='<%# Bind("PriceUnit") %>' />
+                                                            </td>
+                                                            <td>
+                                                                <asp:TextBox ID="Total_with_DiscountTextBox" runat="server" Text='<%# Bind("TotalWithDiscount") %>' />
+                                                            </td>
+                                                            <td>
+                                                                <asp:TextBox ID="Total_with_TaxTextBox" runat="server" Text='<%# Bind("TotalWithTax") %>' />
+                                                            </td>
+                                                        </tr>
+                                                    </InsertItemTemplate>--%>
+                                                    <ItemTemplate>
+                                                        <tr style="">
+                                                            <td>
+                                                                <asp:Label ID="ProductIDLabel" runat="server" Text='<%# Eval("ProductID") %>' />
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="ProductBrandLabel" runat="server" Text='<%# Eval("ProductBrand") %>' />
+                                                            <td>
+                                                                <asp:Label ID="PriceUnitLabel" runat="server" Text='<%# Eval("PriceUnit") %>' />
+                                                            </td>
+                                                           <%-- <td>
+                                                                <asp:TextBox ID="TextBoxQuantity" runat="server" Text='<%# Eval("Quantity") %>' />
+                                                            </td>--%>
+                                                            <td>
+                                                                <asp:Label ID="ColorLabel" runat="server" Text='<%# Eval("Color") %>' />
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="SizeLabel" runat="server" Text='<%# Eval("Size") %>' />
+                                                            </td>
+                                                            
+                                                               
+                                                            
+                                                        </tr>
+                                                    </ItemTemplate>
+                                                    <LayoutTemplate>
+                                                                <div>
+                                                                    <table id="itemPlaceholderContainer" runat="server" class=".table-hover">
+                                                                        <tr runat="server" style="">
+                                                                            <th runat="server">Product ID</th>
+                                                                            <th runat="server">Product Brand</th>
+                                                                    <th runat="server">Price Unit</th>
+                                                                    <th runat="server">Quantity</th>
+                                                                            <th runat="server">Color</th>
+                                                                            <th runat="server">Size</th>
+                                                                        </tr>
+                                                                        <tr id="itemPlaceholder" runat="server">
+                                                                        </tr>
+                                                                    </table>
+                                                                </div>
+                                                    </LayoutTemplate>
+                                                    <SelectedItemTemplate>
+                                                        <tr style="">
+                                                            <td>
+                                                                <asp:Label ID="ProductIDLabel" runat="server" Text='<%# Eval("ProductID") %>' />
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="ProductBrandLabel" runat="server" Text='<%# Eval("ProductBrand") %>' />
+                                                            <td>
+                                                                <asp:Label ID="PriceUnitLabel" runat="server" Text='<%# Eval("PriceUnit") %>' />
+                                                            </td>
+                                                            <%--<td>
+                                                                <asp:TextBox ID="TextBoxQuantity" runat="server" Text='<%# Eval("Quantity") %>' />
+                                                            </td>--%>
+                                                            <td>
+                                                                <asp:Label ID="ColorLabel" runat="server" Text='<%# Eval("Color") %>' />
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="SizeLabel" runat="server" Text='<%# Eval("Size") %>' />
+                                                            </td>
+                                                        </tr>
+                                                        <EmptyDataTemplate>
+                                                        <table runat="server" style="">
+                                                            <tr>
+                                                                <td>No data was returned.</td>
+                                                            </tr>
+                                                        </table>
+                                                    </EmptyDataTemplate>
+                                                    </SelectedItemTemplate>
+                                                </asp:ListView>                                       
+                                            </span>
+                                            <%--<img src="Picture" alt="" />--%>
+                                            <span class="item-info">
+                                               
+                                        <span class="item-left">
+                                                 
+                                            <span class="item-right">
+                                               
+                                            </span>--%>
+                                                
+                                            </span>
+                                        </span>
+                                    </span>
+                                   
+
+                                    <li class="divider"></li>
+                                <li><a href="#" class="button" onclick="ConfirmOrderShoppingCart_Click">Checkout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </div>
+               
+            </div>
+        </div>
+
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <footer id="Fotter">
+                <div class="Link">
+                </div>
+                <div class="Box2">
+                    <a href="http://www.facebook.com"><i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i></a>
+                    <a href="http://www.twitter.com"><i class="fa fa-twitter fa-3x" aria-hidden="true"></i></a>
+                    <a href="http://www.youtube.com"><i class="fa fa-youtube-square fa-3x" aria-hidden="true"></i></a>
+                    <a href="http://www.github.com"><i class="fa fa-git fa-3x" aria-hidden="true"></i></a>
+                </div>
+                <div class="Cont">
+                    <p>&copy; <%: DateTime.Now.Year %> - WebShop</p>
+                </div>
+            </footer>
+        </div>
+    </form>
+
+</body>
+</html>
